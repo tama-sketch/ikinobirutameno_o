@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>生き延びるための 芸術・意匠・音楽</title>
+    <link rel="stylesheet" href="ikinobiru.css" />
+  </head>
+  <body>
+    <div class="slideshow">
+      <img id="slideshow-image" src="ikinobiru_photo/maru_tyuu/maru_tyuu_261.JPG" alt="スライド画像" />
+    </div>
+
+    <script>
+      const images = [
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_1.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_2.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_3.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_4.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_5.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_6.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_7.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_8.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_9.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_10.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_11.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_12.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_13.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_14.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_15.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_16.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_17.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_18.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_19.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_20.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_21.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_22.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_23.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_24.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_25.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_26.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_27.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_28.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_29.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_30.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_31.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_32.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_33.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_34.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_35.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_36.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_37.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_38.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_39.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_40.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_41.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_42.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_43.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_44.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_45.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_46.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_47.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_48.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_49.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_50.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_51.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_52.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_53.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_54.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_55.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_56.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_57.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_58.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_59.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_60.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_61.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_62.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_63.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_64.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_65.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_66.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_67.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_68.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_69.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_70.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_71.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_72.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_73.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_74.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_75.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_76.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_77.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_78.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_79.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_80.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_81.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_82.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_83.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_84.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_85.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_86.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_87.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_88.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_89.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_90.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_91.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_92.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_93.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_94.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_95.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_96.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_97.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_98.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_99.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_100.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_101.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_102.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_103.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_104.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_105.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_106.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_107.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_108.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_109.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_110.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_111.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_112.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_113.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_114.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_115.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_116.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_117.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_118.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_119.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_120.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_121.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_122.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_123.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_124.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_125.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_126.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_127.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_128.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_129.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_130.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_131.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_132.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_133.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_134.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_135.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_136.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_137.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_138.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_139.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_140.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_141.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_142.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_143.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_144.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_145.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_146.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_147.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_148.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_149.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_140.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_141.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_142.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_143.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_144.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_145.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_146.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_147.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_148.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_149.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_150.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_151.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_152.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_153.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_154.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_155.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_156.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_157.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_158.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_159.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_160.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_161.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_162.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_163.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_164.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_165.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_166.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_167.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_168.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_169.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_170.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_171.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_172.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_173.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_174.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_175.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_176.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_177.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_178.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_179.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_180.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_181.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_182.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_183.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_184.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_185.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_186.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_187.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_188.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_189.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_190.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_191.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_192.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_193.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_194.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_195.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_196.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_197.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_198.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_199.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_200.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_201.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_202.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_203.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_204.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_205.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_206.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_207.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_208.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_209.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_210.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_211.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_212.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_213.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_214.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_215.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_216.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_217.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_218.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_219.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_220.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_221.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_222.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_223.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_224.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_225.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_226.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_227.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_228.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_229.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_230.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_231.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_232.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_233.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_234.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_235.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_236.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_237.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_238.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_239.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_240.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_241.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_242.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_243.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_244.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_245.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_246.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_247.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_248.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_249.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_250.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_261.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_262.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_263.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_264.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_265.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_266.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_267.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_268.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_269.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_270.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_271.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_272.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_273.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_274.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_275.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_276.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_277.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_278.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_279.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_280.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_281.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_282.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_283.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_284.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_285.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_286.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_287.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_288.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_289.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_290.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_291.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_292.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_293.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_1.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_2.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_3.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_4.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_5.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_6.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_7.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_8.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_9.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_10.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_11.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_12.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_13.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_14.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_15.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_16.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_17.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_18.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_19.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_20.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_21.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_22.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_23.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_24.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_25.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_26.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_27.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_28.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_29.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_30.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_31.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_32.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_33.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_34.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_35.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_36.JPG"
+      ];
+
+      // ★ 長い音を鳴らしたい画像を指定（ファイル名 or インデックス）
+      const longToneImages = [
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_2.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_19.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_31.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_35.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_51.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_52.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_53.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_68.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_82.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_83.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_86.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_95.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_105.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_106.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_107.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_108.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_111.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_112.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_113.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_123.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_128.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_129.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_131.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_132.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_133.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_134.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_137.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_159.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_162.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_170.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_171.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_179.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_180.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_181.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_182.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_183.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_186.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_191.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_192.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_193.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_199.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_200.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_207.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_209.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_216.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_223.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_229.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_230.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_236.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_240.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_249.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_250.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_251.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_262.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_274.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_277.JPG",
+        "ikinobiru_photo/maru_tyuu/maru_tyuu_291.JPG"
+      ];
+  // または index で指定したい場合：
+  // const longToneImagesIndex = [2, 6];
+
+  // --- 音を鳴らさない画像リスト ---
+      const silentImages = [
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_1.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_2.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_3.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_4.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_5.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_6.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_7.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_8.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_9.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_10.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_11.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_12.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_13.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_14.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_15.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_16.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_17.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_18.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_19.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_20.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_21.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_22.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_23.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_24.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_25.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_26.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_27.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_28.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_29.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_30.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_31.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_32.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_33.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_34.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_35.JPG",
+        "ikinobiru_photo/maru_concrete_tyuu/m_c_t_36.JPG",
+        // 必要な画像を追加
+      ];
+
+  const imgEl = document.getElementById("slideshow-image");
+  let current = 0;
+
+  // --- Web Audio API ---
+  const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+  // --- 音階（C3〜C6） ---
+  const notes = [
+    130.81,138.59,146.83,155.56,164.81,174.61,185.00,196.00,207.65,220.00,233.08,246.94,
+    261.63,277.18,293.66,311.13,329.63,349.23,369.99,392.00,415.30,440.00,466.16,493.88,
+    523.25,554.37,587.33,622.25,659.25,698.46,739.99,783.99,830.61,880.00,932.33,987.77,
+    1046.50
+  ];
+
+  const waveTypes = ['sine', 'square', 'triangle'];
+
+  // --- 短い音 ---
+  function playShortTone() {
+    const osc = audioCtx.createOscillator();
+    const gain = audioCtx.createGain();
+
+    const freq = notes[Math.floor(Math.random() * notes.length)];
+    const wave = waveTypes[Math.floor(Math.random() * waveTypes.length)];
+
+    osc.type = wave;
+    osc.frequency.value = freq;
+
+    osc.connect(gain);
+    gain.connect(audioCtx.destination);
+
+    const now = audioCtx.currentTime;
+
+    gain.gain.setValueAtTime(0.15, now);
+    gain.gain.linearRampToValueAtTime(0, now + 1.2);
+
+    osc.start(now);
+    osc.stop(now + 1.2);
+  }
+
+  // --- 長い音 ---
+  function playLongTone() {
+    const osc = audioCtx.createOscillator();
+    const gain = audioCtx.createGain();
+
+    const freq = notes[Math.floor(Math.random() * notes.length)];
+    const wave = waveTypes[Math.floor(Math.random() * waveTypes.length)];
+
+    osc.type = wave;
+    osc.frequency.value = freq;
+
+    osc.connect(gain);
+    gain.connect(audioCtx.destination);
+
+    const now = audioCtx.currentTime;
+
+    gain.gain.setValueAtTime(0.12, now);
+    gain.gain.linearRampToValueAtTime(0.05, now + 0.2);
+    gain.gain.linearRampToValueAtTime(0, now + 4.0);
+
+    osc.start(now);
+    osc.stop(now + 4.0);
+  }
+
+  // --- 画像切り替え ---
+  function showRandomImage() {
+    if (images.length <= 1) return;
+
+    let nextIndex;
+    do { nextIndex = Math.floor(Math.random() * images.length); }
+    while (nextIndex === current);
+
+    current = nextIndex;
+    const filename = images[current];
+
+    imgEl.onload = () => {
+    // 画像が画面に描画されたタイミング
+
+    // ▼ 鳴らさない画像なら何もしない
+    if (silentImages.includes(filename)) return;
+
+    // ▼ 短い音（毎回）
+    playShortTone();
+
+    // ▼ 特定画像なら長い音を鳴らす
+    if (longToneImages.includes(filename)) {
+      playLongTone();
+    }
+  };
+
+  imgEl.src = filename;
+
+    // ▼ インデックス指定したい場合はこちらでもOK
+    // if (longToneImagesIndex.includes(current)) {
+    //   playLongTone();
+    // }
+  }
+
+  // --- Safari 初回タップで Audio 解禁 ---
+  window.addEventListener('click', () => {
+    if (audioCtx.state === 'suspended') audioCtx.resume();
+    showRandomImage();
+  }, { once: true });
+
+  // --- 画像切り替えスケジュール ---
+  function scheduleNextImage() {
+    const interval = 600 + Math.random() * 1200;
+    setTimeout(() => {
+      showRandomImage();
+      scheduleNextImage();
+    }, interval);
+  }
+
+  scheduleNextImage();
+    </script>
+  </body>
+</html>
